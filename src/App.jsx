@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import Description from "./components/Description";
 import Feedback from "./components/Feedback";
 import Notification from "./components/Notification";
 import Options from "./components/Options";
@@ -33,11 +34,7 @@ function App() {
 
   return (
     <div className="container">
-      <h1>Sip Happens Café</h1>
-      <p>
-        Please leave your feedback about our service by selecting one of the
-        options below.
-      </p>
+      <Description />
       <Options onFeedback={updateFeedback} total={totalFeedback} />
       {totalFeedback !== 0 ? (
         <Feedback feedback={feedback} positiveFeedback={positiveFeedback} />
